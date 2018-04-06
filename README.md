@@ -1,4 +1,4 @@
-# with-tmp-dir
+# tmp-promise
 Run a promise-based function with a temporary directory, deleting it afterwards.
 
 Requires NodeJS 8+.
@@ -6,7 +6,7 @@ Requires NodeJS 8+.
 # Installation
 
 ```sh
-npm install --save with-tmp-dir
+npm install --save tmp-promise
 ```
 
 # Usage example
