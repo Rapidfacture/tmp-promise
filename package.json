@@ -1,5 +1,5 @@
 {
-  "name": "tmp-promise",
+  "name": "with-tmp-dir-promise",
   "version": "1.0.0",
   "description": "Utilities to use tmp temporary directories with promise-based code",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rapidfacture/tmp-promise.git"
+    "url": "git+https://github.com/Rapidfacture/with-tmp-dir-promise.git"
   },
   "author": "Rapidfacture GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Rapidfacture/tmp-promise/issues"
+    "url": "https://github.com/Rapidfacture/with-tmp-dir-promise/issues"
   },
-  "homepage": "https://github.com/Rapidfacture/tmp-promise/blob/master/README.md",
+  "homepage": "https://github.com/Rapidfacture/with-tmp-dir-promise/blob/master/README.md",
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.0.5",
