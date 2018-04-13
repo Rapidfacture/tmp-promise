@@ -32,7 +32,6 @@ WithTempDir(function (tmpdir) {
 # WithTempDir documentation
 
 ```js
-
 /**
  * Run the given callback with a newly created temporary directory,
  * automatically cleaning up once the promise
