@@ -1,6 +1,6 @@
 {
   "name": "with-tmp-dir-promise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utilities to use tmp temporary directories with promise-based code",
   "main": "index.js",
   "scripts": {
