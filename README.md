@@ -12,7 +12,7 @@ npm install --save with-tmp-dir-promise
 # Usage example
 
 ```js
-const {WithTempDir} = require('with-temp-dir-promise');
+const {WithTempDir} = require('with-tmp-dir-promise');
 
 WithTempDir(function (tmpdir) {
     // tmpdir is a string like '/tmp/q3q235',
