@@ -29,11 +29,11 @@ function WithTempDir (callback, opts = {unsafeCleanup: true, cleanupAfter: false
                     cleanupCallback(null);
                 }
             }).catch(arg => {
-                if (!opts.cleanupAfter && opts.skipCleanup === false) {
+                if (opts.cleanupAfter === false && opts.skipCleanup === false) {
                     cleanupCallback(null);
                 }
                 reject(arg);
-                if (opts.cleanupAfter) {
+                if (opts.cleanupAfter === true && opts.skipCleanup === false) {
                     cleanupCallback(null);
                 }
             });
