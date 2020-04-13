@@ -11,7 +11,7 @@ const tmp = require('tmp');
  * Also supports cleanupAfter opt: If true, cleanup after resolving/rejecting the returned Promise.
  * If false (default), cleanup before
  */
-function WithTempDir (callback, opts = {unsafeCleanup: true, cleanupAfter: false, skipCleanup: false}) {
+function WithTempDir(callback, opts = { unsafeCleanup: true, cleanupAfter: false, skipCleanup: false }) {
     return new Promise((resolve, reject) => {
         // Create temp dir to write into and which is automatically cleaned up
         // unsafe cleanup: Delete all files in the directory automatically
@@ -21,19 +21,19 @@ function WithTempDir (callback, opts = {unsafeCleanup: true, cleanupAfter: false
             }
             callback(tmpPath).then(arg => {
                 // Callback-returned promise resolved
-                if (opts.cleanupAfter === false && opts.skipCleanup === false) {
+                if (!opts.cleanupAfter && !opts.skipCleanup) {
                     cleanupCallback(null);
                 }
                 resolve(arg);
-                if (opts.cleanupAfter === true && opts.skipCleanup === false) {
+                if (opts.cleanupAfter && !opts.skipCleanup) {
                     cleanupCallback(null);
                 }
             }).catch(arg => {
-                if (opts.cleanupAfter === false && opts.skipCleanup === false) {
+                if (!opts.cleanupAfter && !opts.skipCleanup) {
                     cleanupCallback(null);
                 }
                 reject(arg);
-                if (opts.cleanupAfter === true && opts.skipCleanup === false) {
+                if (opts.cleanupAfter && !opts.skipCleanup) {
                     cleanupCallback(null);
                 }
             });
